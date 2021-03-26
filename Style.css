@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
-body{
+body {
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
@@ -8,135 +8,169 @@ body{
   font-size: 1rem;
 }
 
-.box{
-  padding-right: 0;
-  padding-left: 0;
-}
-
-#box1, #box2{
+#box1,
+#box2 {
   height: 100vh;
   width: 40vw;
   text-align: center;
   border: solid;
   border-color: lightgrey;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-#box1{
+#box1 {
   background-color: lightgrey;
 }
 
-#box2{
+#box2 {
   background-color: white;
 }
 
-#player2, #player1, #score2, #score1, #roundJ2, #roundJ1{
-  position: relative;
+#player2,
+#player1,
+#scoreGlobal1,
+#scoreGlobal2,
+#roundJ2,
+#roundJ1,
+button,
+.dice {
   z-index: 1;
 }
 
-#player2, #player1, #score2, #score1{
+#player2,
+#player1,
+#scoreGlobal1,
+#scoreGlobal2,
+#roundJ2,
+#roundJ1 {
+  position: relative;
+}
+
+.point,
+button,
+.dice {
+  position: absolute;
+}
+
+.point,
+#scoreGlobal1,
+#scoreGlobal2,
+ion-icon {
+  color: red;
+}
+
+#player2,
+#player1,
+#scoreGlobal1,
+#scoreGlobal2 {
   top: 20vh;
 }
 
-#player2, #player1{
+#player2,
+#player1 {
   font-size: 1.5rem;
-  color: grey
+  color: grey;
 }
 
-.point{
-  position: absolute;
+.point {
   bottom: 30%;
-  color: red;
   height: 10px;
 }
 
-#score2, #score1{
+#scoreGlobal1,
+#scoreGlobal2 {
   font-size: 5rem;
-  color: red;
 }
 
-#roundJ2, #roundJ1{
+#roundJ2,
+#roundJ1 {
   top: 58vh;
   background-color: red;
 }
 
-#scoreRoundJ2, #scoreRoundJ1{
-  color:white;
+#scoreRoundJ2,
+#scoreRoundJ1 {
+  color: white;
   font-weight: bold;
   font-size: 2rem;
 }
 
-button, .dice{
-  position : absolute;
-  z-index: 1;
- }
-
-button{
- background-color: transparent;
+button {
+  background-color: transparent;
 }
 
-ion-icon{
-  color: red;
+ion-icon {
   vertical-align: sub;
   height: 1rem;
 }
 
-#newGame{
-  top:5vh;
+#newGame {
+  top: 5vh;
 }
 
-#rollDice{
+#rollDice {
   top: 65vh;
 }
 
-#hold{
+#hold {
   top: 70vh;
 }
 
-.dice{
+.dice {
   width: 100px;
   top: 45vh;
 }
 
+#dice6,
+#dice5,
+#dice4,
+#dice3,
+#dice2 {
+  display: none;
+}
+
 @media screen and (min-width: 380px) and (max-width: 770px) {
-  button{
+  button {
     font-size: 1rem;
-   }
+  }
 }
 
 @media screen and (min-width: 771px) {
-  .dice{
+  .dice {
     top: 30vh;
   }
 
-  button{
+  button {
     font-size: 1.2rem;
   }
 
-   ion-icon{
-     height: 1.4rem;
-   }
+  ion-icon {
+    height: 1.4rem;
+  }
 
-   #player2, #player1{
+  #player2,
+  #player1 {
     font-size: 2rem;
   }
 
-  #score2, #score1{
+  #scoreGlobal1,
+  #scoreGlobal2 {
     font-size: 7rem;
   }
 
-  #rollDice{
+  #rollDice {
     top: 68vh;
   }
-  
-  #hold{
+
+  #hold {
     top: 77vh;
   }
 
-  #roundJ2, #roundJ1{
+  #roundJ2,
+  #roundJ1 {
     padding-top: 20px;
     padding-bottom: 20px;
     top: 48vh;
   }
-
 }

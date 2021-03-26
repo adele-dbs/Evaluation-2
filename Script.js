@@ -226,14 +226,17 @@ hold.addEventListener('click', clickHold)
 /*win*/
 function win() {
   if (numScoreGlobal1 >= 100){
-    scoreGlobal1.textContent = "Victoire"
+    scoreGlobal1.textContent = "Win"
     player1.style.color = 'grey'
     player2.style.color = 'grey'
+    point1.style.color = 'transparent'
+    point2.style.color = 'transparent'
   } else 
     if (numScoreGlobal2 >= 100){
-      scoreGlobal2.textContent = "Victoire"
+      scoreGlobal2.textContent = "Win"
       player1.style.color = 'grey'
       player2.style.color = 'grey'
+      point1.style.color = 'transparent'
+      point2.style.color = 'transparent'
     } 
 }
-

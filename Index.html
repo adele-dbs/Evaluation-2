@@ -1,118 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  <meta 
-    charset="UTF-8">
-  <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1">
-  <title>Petit Jeu</title>
-  <meta 
-    name="description" 
-    content="Jeu de dés...">
-  <link
-    rel ="stylesheet"
-    type="text/css"
-    href="Style.css">
-  <script 
-    type="module" 
-    src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
-  </script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-</head>
+  <head>
+    <meta 
+      charset="UTF-8">
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1">
+    <title>Petit Jeu</title>
+    <meta 
+      name="description" 
+      content="Jeu de dé pour deux joueurs. Le premier joueur à avoir obtenu 100 points gagne. Attention, si le dé indique 1, le joueur perd le round.">
+    <link
+      rel ="stylesheet"
+      type="text/css"
+      href="Style.css">
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  </head>
 
 
-<body>
+  <body>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col class="box" id="box1">
-        <div class="ion-text-center" id="player1">
-          PLAYER 1
-          <ion-icon name="ellipse" class="point"></ion-icon>
-        </div>
-        <div class="ion-text-center" id="score1">
-          0
-        </div>
-        <div> 
-          <ion-row class="ion-justify-content-center">
-            <ion-col size="10" size-md="4">
-              <div id="roundJ1">
-                CURRENT
-                <br>
-                <span id="scoreRoundJ1">0</span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-col>
+    <ion-grid>
+      <ion-row>
+        <ion-col id="box1">
+          <div id="player1">
+            PLAYER 1
+            <ion-icon name="ellipse" class="point" id="point1"></ion-icon>
+          </div>
+          <div id="scoreGlobal1">
+            0
+          </div>
+          <div> 
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="10" size-md="4">
+                <div id="roundJ1">
+                  CURRENT
+                  <br>
+                  <span id="scoreRoundJ1">0</span>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
 
-      <ion-col class="box" id="box2">
-        <div id="player2">
-          PLAYER 2
-          <ion-icon name="ellipse" class="point"></ion-icon>
-        </div>
-        <div id="score2">
-          0
-        </div>
-        <div> 
-          <ion-row class="ion-justify-content-center">
-            <ion-col size="10" size-md="4">
-              <div id="roundJ2">
-                CURRENT
-                <br>
-                <span id="scoreRoundJ2">0</span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-col id="box2">
+          <div id="player2">
+            PLAYER 2
+            <ion-icon name="ellipse" class="point" id="point2"></ion-icon>
+          </div>
+          <div id="scoreGlobal2">
+            0
+          </div>
+          <div> 
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="10" size-md="4">
+                <div id="roundJ2">
+                  CURRENT
+                  <br>
+                  <span id="scoreRoundJ2">0</span>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <button id="newGame">
-    <ion-icon name="add-circle-outline"></ion-icon> 
-    NEW GAME
-  </button>
-  <button id="roleDice">
-    <ion-icon name="sync-outline"></ion-icon> 
-    ROLL DICE
-  </button>
-  <button id="hold">
-    <ion-icon name="download-outline"></ion-icon> 
-    HODL
-  </button>
+    <button id="newGame">
+      <ion-icon name="add-circle-outline"></ion-icon> 
+      NEW GAME
+    </button>
+    <button id="rollDice">
+      <ion-icon name="sync-outline"></ion-icon> 
+      ROLL DICE
+    </button>
+    <button id="hold">
+      <ion-icon name="download-outline"></ion-icon> 
+      HODL
+    </button>
 
-  <img class="dice"
-    id="dice1"
-    src="./Images/Dice 1.png"
-    alt="Dice-1">
-  <img class="dice"
-    id="dice2"
-    src="./Images/Dice 2.png"
-     alt="Dice-2">
-  <img class="dice"
-    id="dice3"
-    src="./Images/Dice 3.png"
-    alt="Dice-3">
-  <img class="dice"
-    id="dice4"
-    src="./Images/Dice 4.png"
-    alt="Dice-4">
-  <img class="dice"
-    id="dice5"
-    src="./Images/Dice 5.png"
-    alt="Dice-5">
-  <img class="dice"
-    id="dice6"
-    src="./Images/Dice 6.png"
-    alt="Dice-6">
-  
-  <script src="script.js"></script>
-</body>
+    <img class="dice"
+      id="dice1"
+      src="./Images/Dice 1.png"
+      alt="Dice-1">
+    <img class="dice"
+      id="dice2"
+      src="./Images/Dice 2.png"
+      alt="Dice-2">
+    <img class="dice"
+      id="dice3"
+      src="./Images/Dice 3.png"
+      alt="Dice-3">
+    <img class="dice"
+      id="dice4"
+      src="./Images/Dice 4.png"
+      alt="Dice-4">
+    <img class="dice"
+      id="dice5"
+      src="./Images/Dice 5.png"
+      alt="Dice-5">
+    <img class="dice"
+      id="dice6"
+      src="./Images/Dice 6.png"
+      alt="Dice-6">
+    
+    <script 
+      type="module" 
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
+    </script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
 
 </html>
